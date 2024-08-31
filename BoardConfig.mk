@@ -31,7 +31,8 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := $(TARGET_CPU_VARIANT_RUNTIME)
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
-
+#移植所需颠倒屏幕
+BOARD_HAS_FLIPPED_SCREEN:= true
 # Bootloader
 PRODUCT_PLATFORM := lahaina
 TARGET_BOOTLOADER_BOARD_NAME := $(PRODUCT_RELEASE_NAME)
@@ -241,6 +242,7 @@ USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/qcom/lahaina/installer
 
 ALLOW_MISSING_DEPENDENCIES := true
+
 
 # Custom TWRP Versioning
 # See https://github.com/minimal-manifest-twrp/android_device_common_version-info for details
